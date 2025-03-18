@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        double a, b, c, d, e, f, dx, dy, x, y;
+        double a, b, c, d, e, f, x, y;
 
         Scanner coeficientes = new Scanner(System.in);
 
@@ -30,18 +30,11 @@ public class App {
         System.out.println("Insira o coeficiente f.");
         f = coeficientes.nextDouble();
         
-        d = (a * e) - (b * d);
-        dx = (c * e) - (b * f);
-        dy = (a * f) - (c * d);
-        
-        x = dx / d;
-        y = dy / d;
+        x = ((c*e)-(b*f))/((a*e)-(b*d));
+        y = ((a*f)-(c*d))/((a*e)-(b*d));
         
         System.out.println("O valor x é " + x + ". O valor de y é " + y);
         System.out.println("Deseja reiniciar o programa? Sim [Y] / Não [N]");
-
-
-
 
         coeficientes.close();
     }
